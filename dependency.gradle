@@ -1,0 +1,23 @@
+ext {
+    if(System.getProperty("env")==null)
+        println("*********No env variable is provided,Using [local] instead!**********")
+    env = System.getProperty("env") ?: "local"
+    if(!"local".equals(env)&&!"test".equals(env)&&!"prod".equals(env))
+        throw StopExecutionException("only [local,test,prod] should be given in env");
+    
+    mavenUrl="http://192.168.11.81:8081/nexus/content/groups/public/"
+   
+    uploadFeature=[
+            url: "http://192.168.11.81:8081/nexus/content/repositories/thirdparty/",
+            username:"ofm",
+            password:"ofm"
+    ]
+    dependencies = [
+		"junit":"junit:junit:4.12",
+		"spring-boot-starter-parent":"org.springframework.boot:spring-boot-starter-parent:1.5.17.RELEASE",
+		"spring-cloud-starter-eureka-server":"org.springframework.cloud:spring-cloud-starter-eureka-server:1.4.6.RELEASE",
+		"spring-cloud-starter-eureka":"org.springframework.cloud:spring-cloud-starter-eureka:1.4.6.RELEASE",
+        "spring-cloud-starter-zuul":"org.springframework.cloud:spring-cloud-starter-zuul:1.4.6.RELEASE",
+		"spring-boot-starter-web":"org.springframework.boot:spring-boot-starter-web:1.5.17.RELEASE"
+    ]
+}

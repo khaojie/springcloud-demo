@@ -1,0 +1,14 @@
+apply plugin: 'maven'
+apply plugin: 'java'
+apply from: 'dependency.gradle'
+
+archivesBaseName = 'springcloud-demo'
+allprojects {
+    repositories {
+        maven{ url 'http://192.168.11.81:8081/nexus/content/groups/public/'}
+    }
+    group = 'com.springcloud.demo'
+    version = '1.0'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}

@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.17.RELEASE'
+}
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'serviceDetactor'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.detactor.DetactorApplication'
+}
+
+dependencies {
+	compile rootProject .ext.dependencies[ "spring-boot-starter-parent"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka-server"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
+    compile rootProject .ext.dependencies[ "spring-boot-starter-web"]
+   // testCompile rootProject .ext.dependencies[ "spring-boot-starter-test"]
+   // testCompile rootProject .ext.dependencies[ "spring-test"] 
+    testCompile rootProject .ext.dependencies[ "junit"]
+}

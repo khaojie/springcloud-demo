@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.17.RELEASE'
+}
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'serviceProvider'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.provider.ServiceProviderController'
+}
+
+dependencies {
+    testCompile rootProject .ext.dependencies[ "junit"]
+	compile rootProject .ext.dependencies[ "spring-boot-starter-parent"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
+    compile rootProject .ext.dependencies[ "spring-boot-starter-web"]
+}
