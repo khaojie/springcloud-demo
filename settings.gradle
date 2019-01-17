@@ -1,4 +1,5 @@
 include 'serviceDetactor'
 include 'serviceProvider'
 include 'serviceGateway'
+include 'serviceConsumer'
 

@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    baseName = 'serviceConsumer'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.consumer.ConsumerApplication'
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile rootProject .ext.dependencies[ "junit"]
+    testCompile rootProject .ext.dependencies[ "spring-boot-starter-test"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-feign"]
+}

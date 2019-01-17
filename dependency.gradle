@@ -18,6 +18,8 @@ ext {
 		"spring-cloud-starter-eureka-server":"org.springframework.cloud:spring-cloud-starter-eureka-server:1.4.6.RELEASE",
 		"spring-cloud-starter-eureka":"org.springframework.cloud:spring-cloud-starter-eureka:1.4.6.RELEASE",
         "spring-cloud-starter-zuul":"org.springframework.cloud:spring-cloud-starter-zuul:1.4.6.RELEASE",
-		"spring-boot-starter-web":"org.springframework.boot:spring-boot-starter-web:1.5.17.RELEASE"
+        "spring-cloud-starter-feign":"org.springframework.cloud:spring-cloud-starter-feign:1.4.6.RELEASE",
+		"spring-boot-starter-web":"org.springframework.boot:spring-boot-starter-web:1.5.17.RELEASE",
+        "spring-boot-starter-test":"org.springframework.boot:spring-boot-starter-test:1.5.17.RELEASE"
     ]
 }
