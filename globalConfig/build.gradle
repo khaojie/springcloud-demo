@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.17.RELEASE'
+}
+
+jar {
+    baseName = 'globalConfig'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.config.ConfigApplication'
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile rootProject .ext.dependencies[ "junit"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
+    compile rootProject .ext.dependencies[ "spring-cloud-config-server"]
+}

@@ -1,0 +1,23 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          searchPaths: / #配置仓库路径
+          username: k.haojie@hotmail.com #访问git仓库的用户名
+          password: comanchegriffon26@ #访问git仓库的用户密码
+          uri: https://github.com/khaojie/springcloud-config.git
+      label: master
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

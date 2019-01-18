@@ -18,4 +18,6 @@ dependencies {
 	compile rootProject .ext.dependencies[ "spring-boot-starter-parent"]
     compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
     compile rootProject .ext.dependencies[ "spring-boot-starter-web"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-config"]
+    
 }

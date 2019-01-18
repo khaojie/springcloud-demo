@@ -18,7 +18,7 @@ public class TestDB {
     @Test
     public void test() throws Exception{
         try {
-            System.out.println(apiService.hello());
+            System.out.println(apiService.hello("comanche"));
         }catch (Exception e){
             throw e;
         }
