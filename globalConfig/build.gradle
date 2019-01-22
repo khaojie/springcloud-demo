@@ -17,4 +17,6 @@ dependencies {
     testCompile rootProject .ext.dependencies[ "junit"]
     compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
     compile rootProject .ext.dependencies[ "spring-cloud-config-server"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-bus-amqp"]
+    
 }

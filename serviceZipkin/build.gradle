@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.17.RELEASE'
+}
+
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'serviceZipkin'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.zipkin.ZipkinApplication'
+}
+
+dependencies {
+    testCompile rootProject .ext.dependencies[ "junit"]
+    compile rootProject .ext.dependencies[ "zipkin-autoconfigure-ui"]
+    compile rootProject .ext.dependencies[ "zipkin-server"]
+   
+}
