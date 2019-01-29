@@ -4,4 +4,5 @@ include 'serviceGateway'
 include 'serviceConsumer'
 include 'serviceZipkin'
 include 'globalConfig'
+include 'distributeLock'
 

@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '1.5.17.RELEASE'
+}
+
+jar {
+    baseName = 'distributeLock'
+}
+
+bootRepackage {
+    mainClass = 'com.springcloud.demo.lock.DistributeLockApplication'
+}
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile rootProject .ext.dependencies[ "junit"]
+    testCompile rootProject .ext.dependencies[ "spring-boot-starter-test"]
+    compile rootProject .ext.dependencies[ "spring-boot-starter-web"]
+    compile rootProject .ext.dependencies[ "spring-boot-starter-data-redis"]
+    compile rootProject .ext.dependencies[ "redisson"]
+    
+}
