@@ -16,6 +16,11 @@ bootRepackage {
 dependencies {
     testCompile rootProject .ext.dependencies[ "junit"]
     compile rootProject .ext.dependencies[ "zipkin-autoconfigure-ui"]
-    compile rootProject .ext.dependencies[ "zipkin-server"]
-   
+//    compile rootProject .ext.dependencies[ "zipkin-server"]
+    compile rootProject .ext.dependencies[ "spring-cloud-sleuth-zipkin-stream"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-sleuth"]
+    compile rootProject .ext.dependencies[ "spring-cloud-stream-binder-rabbit"]
+    compile rootProject .ext.dependencies[ "zipkin-storage-mysql"]
+    compile rootProject .ext.dependencies[ "spring-boot-starter-jdbc"]
+    compile rootProject .ext.dependencies[ "mysql-connector-java"]
 }

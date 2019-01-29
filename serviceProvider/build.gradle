@@ -18,10 +18,13 @@ dependencies {
     compile rootProject .ext.dependencies[ "spring-cloud-starter-eureka"]
     compile rootProject .ext.dependencies[ "spring-cloud-starter-config"]
     compile rootProject .ext.dependencies[ "spring-cloud-starter-bus-amqp"]
-    compile rootProject .ext.dependencies[ "spring-cloud-sleuth-zipkin"]
+//    compile rootProject .ext.dependencies[ "spring-cloud-sleuth-zipkin"]
+    compile rootProject .ext.dependencies[ "spring-cloud-sleuth-stream"]
+    compile rootProject .ext.dependencies[ "spring-cloud-starter-sleuth"]
+    compile rootProject .ext.dependencies[ "spring-cloud-stream-binder-rabbit"]
     compile rootProject .ext.dependencies[ "spring-boot-starter-parent"]
     compile rootProject .ext.dependencies[ "spring-boot-starter-actuator"]
     compile rootProject .ext.dependencies[ "spring-boot-starter-web"]
-    
+    runtime rootProject .ext.dependencies["aspectjweaver"]
     
 }
