@@ -4,4 +4,4 @@ spring:
   redis:
     host: localhost
     port: 6379
-    password: jhjredis12345@
+    password: redis12345@
